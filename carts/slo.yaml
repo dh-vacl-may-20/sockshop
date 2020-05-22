@@ -12,11 +12,11 @@ objectives:
     pass:             # pass if (relative change <= 10% AND absolute value is < 600ms)
       - criteria:
           - "<=+10%"  # relative values require a prefixed sign (plus or minus)
-          - "<3000"    # absolute values only require a logical operator
+          - "<600"    # absolute values only require a logical operator
     warning:          # if the response time is below 800ms, the result should be a warning
       - criteria:
-          - "<=3800"
+          - "<=800"
     weight: 1
 total_score:
-  pass: "10%"
-  warning: "25%"
+  pass: "90%"
+  warning: "75%"
